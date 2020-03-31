@@ -1,5 +1,5 @@
 <div class="container">
-  <form novalidate [formGroup] = "feedbackForm">
+  <form novalidate [formGroup] = "feedbackForm" (ngSubmit) = "onSubmit()">
     <p>
       {{feedbackForm.value | json}} {{feedbackForm.status}}
     </p>
