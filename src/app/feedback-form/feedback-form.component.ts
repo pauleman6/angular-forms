@@ -23,12 +23,12 @@ export class FeedbackFormComponent implements OnInit {
 
   buildForm(){
     this.feedbackForm = this.fb.group({
-      firstname: '',
-      lastname: '',
-      phone: 0,
-      email: '',
-      contactType: 'None',
-      message: ''
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      phone: [0, Validators.required],
+      email: ['', Validators.required],
+      contactType: ['None', Validators.required],
+      message: ['', Validators.required]
     });
     
   }
