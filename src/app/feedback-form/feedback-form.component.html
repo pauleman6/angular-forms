@@ -1,5 +1,8 @@
 <div class="container">
   <form novalidate [formGroup] = "feedbackForm">
+    <p>
+      {{feedbackForm.value | json}} {{feedbackForm.status}}
+    </p>
     <div class="form-group">
       <input class="form-control" placeholder="First Name" formControlName="firstname" type="text">
     </div>
@@ -14,7 +17,7 @@
     </div>
     <div class="form-group">
       <select class="form-control" placeholder="How to contact?" formControlName="contactType">
-        <option *ngFor="let ctype of contactType" [value]="ctype">{{cytpe}}</option>
+        <option *ngFor="let ctype of contactType" [value]="ctype">{{ctype}}</option>
       </select>
     </div>
     <div>

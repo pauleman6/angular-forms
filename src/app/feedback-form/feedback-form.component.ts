@@ -12,7 +12,7 @@ export class FeedbackFormComponent implements OnInit {
   
   feedbackForm: FormGroup;
   feedback: Feedback;
-  contactType: ContactType
+  contactType= ContactType;
   
   constructor(private fb: FormBuilder) {
     this.buildForm();
