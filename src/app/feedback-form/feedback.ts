@@ -10,4 +10,4 @@ export class Feedback{
 
 }
 
-export const contactType = ['None', 'Phone', 'Email'];
+export const ContactType = ['None', 'Phone', 'Email'];
