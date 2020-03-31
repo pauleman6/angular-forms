@@ -1,10 +1,28 @@
 <div class="container">
   <form novalidate [formGroup] = "feedbackForm">
     <div class="form-group">
-      <input class="form-control" placeholder="First Name" formControlName="firstname">
+      <input class="form-control" placeholder="First Name" formControlName="firstname" type="text">
     </div>
     <div class="form-group">
-      <input class="form-control" placeholder="Last Name" formControlName="lastname">
+      <input class="form-control" placeholder="Last Name" formControlName="lastname" type="text">
     </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="Phone Number" formControlName="phone" type="tel">
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="Email" formControlName="email" type="email">
+    </div>
+    <div class="form-group">
+      <select class="form-control" placeholder="How to contact?" formControlName="contactType">
+        <option *ngFor="let ctype of contactType" [value]="ctype">{{cytpe}}</option>
+      </select>
+    </div>
+    <div>
+      <textarea class="form-control" placeholder="Provide your Feedback" formControlName="message" rows=12>
+      </textarea>
+      </div>
+      <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
   </form>
 </div>
