@@ -27,7 +27,7 @@ export class FeedbackFormComponent implements OnInit {
       lastname: ['', Validators.required],
       phone: [0, Validators.required],
       email: ['', Validators.required],
-      contactType: ['None', Validators.required],
+      contactType: 'None',
       message: ['', Validators.required]
     });
     
