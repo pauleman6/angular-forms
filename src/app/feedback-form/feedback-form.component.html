@@ -5,6 +5,7 @@
     </p>
     <div class="form-group">
       <input class="form-control" placeholder="First Name" formControlName="firstname" type="text">
+      <small *ngIf="feedbackForm.get('firstname').hasError('required') && feedbackForm.get('firstName').touched">First Name is Required Field:</small>
     </div>
     <div class="form-group">
       <input class="form-control" placeholder="Last Name" formControlName="lastname" type="text">
@@ -26,7 +27,7 @@
       </textarea>
       </div>
       <div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" [disabled]="feedbackForm.status == Invalid">Submit</button>
       </div>
   </form>
 </div>
